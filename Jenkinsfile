@@ -1,6 +1,7 @@
 node {
     stage('First') {
         echo 'Hello World'
-        echo `pwd()`
+        env.WORKSPACE = pwd()
+        echo "${env.WORKSPACE}"
     }
 }
